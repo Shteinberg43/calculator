@@ -18,3 +18,4 @@ public:
 	Calculator(Loader const& loader) : loader(loader), numbers(), operations(Operations::getOperations()) {};
 	double calculate(const std::string& exp);
 };
+//for pull requests

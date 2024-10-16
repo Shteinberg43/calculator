@@ -127,15 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\calc\Calculator.h" />
-    <ClInclude Include="..\calc\Operations.h" />
+    <ClInclude Include="Calculator.h" />
     <ClInclude Include="Loader.h" />
+    <ClInclude Include="Operations.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\calc\Calculator.cpp" />
-    <ClCompile Include="..\calc\main.cpp" />
-    <ClCompile Include="..\calc\Operations.cpp" />
+    <ClCompile Include="Calculator.cpp" />
     <ClCompile Include="Loader.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Operations.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

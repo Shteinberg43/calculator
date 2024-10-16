@@ -39,7 +39,7 @@ std::vector<std::string> Calculator::parser(const std::string& exp) {
 	std::vector<std::string> result;
 	while ((ind = expression.find(' ')) != std::string::npos) expression.erase(ind, 1);
 
-	for (int i = 0; i < expression.size(); ++i) { // (-num) to (0-num)
+	for (int i = 0; i < expression.size(); ++i) { //unary minus to binary (-num) to (0-num)
 		if ((expression[i] == '+' || expression[i] == '-') && (i == 0 || (!isdigit(expression[i - 1]) && expression[i - 1] != '.' && expression[i - 1] != ')'))) {
 			auto it = std::find_if(expression.begin() + i + 1, expression.end(), [](char const c) {return !isdigit(c); });
 			expression.insert(it, ')');
@@ -155,3 +155,4 @@ double Calculator::calculate(const std::string& exp) {
 	}
 	return result.top();
 }
+//for pull requests
